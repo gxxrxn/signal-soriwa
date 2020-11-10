@@ -1,0 +1,99 @@
+*{
+    margin : 0 auto;
+}
+.emotion{
+    top : 50px;
+    margin : 0 auto;
+    display : flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items : center;
+    /* border : solid black; */
+    height : 98vh;
+    text-align: center;
+
+}
+
+.backbtn{
+    position : absolute;
+    top : 25px;
+    left : 35px;
+}
+
+.topic {
+    margin : 0 auto;
+    /* border : solid black; */
+}
+
+h1 {
+    font-family : "GongGothicBold";
+}
+
+h4 {
+    font-family : "GongGothicLight";
+    font-weight : lighter;
+    font-size : 16px;
+}
+
+h5 {
+    align-items : center;
+    font-family : "UhBee";
+}
+
+.try{
+    /* border : solid black; */
+    display : flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items : center;
+    width : 50%;
+    height : 70%;
+
+}
+
+.trybox{
+    border : solid #0979ea;
+    width : 35vw;
+    height : 25vw;
+
+}
+
+.resultbox{
+    /* border : solid black; */
+    display : flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items : center;
+    width : 50%;
+    height : 15%;
+}
+
+.result {
+    border : solid 2px white;
+    background-color : #0979ea;
+    border-radius: 24px;
+    width : 40%;
+    height : 60%;
+    margin : 0 auto;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+h3 {
+    font-family : "GongGothicBold";
+    font-size : 1.2rem;
+    color : white;
+}
+
+.blank1 {
+    height : 5px;
+}
+
+.blank2 {
+    height : 10px;
+}
+
+.blank3 {
+    height : 25px;
+}

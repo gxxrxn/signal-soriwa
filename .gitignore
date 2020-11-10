@@ -1,0 +1,10 @@
+.DS_Store
+.vscode
+.idea
+signal_soriwa/db.sqlite3
+**/db.sqlite3
+__pycache__
+
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
