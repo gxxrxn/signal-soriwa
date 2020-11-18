@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal</title>
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'GongGothic_L';
+            src: local('GongGothicLight'),
+                url('{% static 'fonts/GongGothicLight.ttf' %}') format("truetype");
+        }
+        @font-face{
+            font-family : "UhBee";
+            src : url('{% static 'fonts//UhBeeQUEENJ.ttf' %}') format('truetype');
+        }
+        @font-face {
+            font-family: 'GongGothic_M';
+            src: local('GongGothicMedium'),
+            url('{% static 'fonts/GongGothicMedium.ttf' %}') format("truetype");
+        }
+
+        @font-face {
+            font-family: 'GongGothic_B';
+            src: local('GongGothicBold'),
+                url('{% static 'fonts/GongGothicBold.ttf' %}') format("truetype");
+        }
+        body {
+            background-image: url({% static 'src/background.png' %});
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'main' %}">
+            <img class="backbtn no-drag" src="{% static 'src/back.png' %}" width="30" height="30" />
+        </a>
+    </header>
+    <section>
+        <div class="main">
+            <br>
+            <div class="main_msg">
+                <p class="main_txt">오늘의 메뉴를</p>
+                <img class="no-drag" src="{% static 'src/pick.png' %}" alt="pick" width="140">
+            </div>
+            <div class="blank"></div>
+            <div class="menu_container">
+                <div class="menu_item no-drag"><a href="#pop01"><img src="{% static 'src/food_gesture/김떡순.gif'%} "
+                            height="100%" width="100%"></a></div>
+                <div class="menu_item no-drag"><a href="#pop02"><img src="{% static 'src/food_gesture/치맥.gif'%} " height="100%"
+                            width="100%"></a></div>
+                <div class="menu_item no-drag"><a href="#pop03"><img src="{% static 'src/food_gesture/피자.gif'%}" height="100%"
+                            width="100%"></a></div>
+                <div class="menu_item no-drag"><a href="#pop04"><img src="{% static 'src/food_gesture/햄버거.gif'%}" height="100%"
+                            width="100%"></a></div>
+                <div class="menu_item no-drag"><a href="#pop05"><img src="{% static 'src/food_gesture/돈가스.gif'%}" height="100%"
+                            width="100%"></a></div>
+                <div class="menu_item no-drag"><a href="#pop06"><img src="{% static 'src/food_gesture/라면.gif'%}" height="100%"
+                            width="100%"></a></div>
+                <div class="menu_item no-drag"><a href="#pop07"><img src="{% static 'src/food_gesture/삼겹살.gif'%}" height="100%"
+                            width="100%"></a></div>
+                <div class="menu_item no-drag"><a href="#pop08"><img src="{% static 'src/food_gesture/김치찌개.gif'%}" height="100%"
+                            width="100%"></a></div>
+                <div class="menu_item no-drag"><a href="#pop09"><img src="{% static 'src/food_gesture/호박고구마.gif'%}" height="100%"
+                            width="100%"></a></div>
+                <div id="pop01" class="overlay show">
+                    <div class="popup">
+                        <a href="#none" class="close">&times;</a>
+                        <img class="no-drag" src="{% static 'src/food_image/김떡순.png'%}" alt="김떡순" width="500">
+                        <p>김떡순(김밥,떡볶이,순대)</p>
+                    </div>
+                </div>
+                <div id="pop02" class="overlay">
+                    <div class="popup">
+                        <a href="#none" class="close">&times;</a>
+                        <img class="no-drag" src="{% static 'src/food_image/치맥_1.png'%}" alt="치맥" width="500">
+                        <img class="no-drag" src="{% static 'src/food_image/치맥_2.png'%}" alt="치맥" width="500">
+                        <p>치맥(치킨,맥주)</p>
+                    </div>
+                </div>
+                <div id="pop03" class="overlay">
+                    <div class="popup">
+                        <a href="#none" class="close">&times;</a>
+                        <img class="no-drag" src="{% static 'src/food_image/피자.png'%}" alt="피자" width="500">
+                        <p>피자</p>
+                    </div>
+                </div>
+                <div id="pop04" class="overlay">
+                    <div class="popup">
+                        <a href="#none" class="close">&times;</a>
+                        <img class="no-drag" src="{% static 'src/food_image/햄버거_1.png'%}" alt="햄버거" width="500">
+                        <img class="no-drag" src="{% static 'src/food_image/햄버거_2.png'%}" alt="햄버거" width="500">
+                        <p>육즙 좔좔~ 햄버거</p>
+                    </div>
+                </div>
+                <div id="pop05" class="overlay">
+                    <div class="popup">
+                        <a href="#none" class="close">&times;</a>
+                        <img class="no-drag" src="{% static 'src/food_image/돈가스_1.png'%}" alt="돈가스" width="500">
+                        <img class="no-drag" src="{% static 'src/food_image/돈가스_2.png'%}" alt="돈가스" width="500">
+                        <p>바삭바삭 돈가스</p>
+                    </div>
+                </div>
+                <div id="pop06" class="overlay">
+                    <div class="popup">
+                        <a href="#none" class="close">&times;</a>
+                        <img class="no-drag" src="{% static 'src/food_image/라면_2.png'%}" alt="라면" width="500">
+                        <img class="no-drag" src="{% static 'src/food_image/라면_1.png'%}" alt="라면" width="500">
+                        <p>라면인건가~</p>
+                    </div>
+                </div>
+                <div id="pop07" class="overlay">
+                    <div class="popup">
+                        <a href="#none" class="close">&times;</a>
+                        <img src="{% static 'src/food_image/삼겹살_2.png'%}" alt="삼겹살" width="500">
+                        <img src="{% static 'src/food_image/삼겹살_1.png'%}" alt="삼겹살" width="500">
+                        <p>삼겹살</p>
+                    </div>
+                </div>
+                <div id="pop08" class="overlay">
+                    <div class="popup">
+                        <a href="#none" class="close">&times;</a>
+                        <img src="{% static 'src/food_image/김치찌개.png'%}" alt="김치찌개" width="500">
+                        <p>얼~큰한 김치찌개</p>
+                    </div>
+                </div>
+                <div id="pop09" class="overlay">
+                    <a href="#none" class="close">&times;</a>
+                    <div class="popup">
+                        <a href="#none" class="close">&times;</a>
+                        <img src="{% static 'src/food_image/호박고구마.gif'%}" alt="호박고구마" width="400">
+                        <p>호구마!!!!아니...호박고구마</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <p class="character_txt">난...<br> 이게 땡겨!</p>
+        </div>
+        <div class="logo">
+            <img class="no-drag" src="{% static 'src/시그널.png'%}" width="240" alt="시그널이미지" />
+        </div>
+        <p class="character_txt">수어를 보고<br>음식을 맞춰볼까?</p>
+
+    </footer>
+    <script>
+        // 오버레이 누르면 닫히게
+        // (function () {
+        //     const overlayElem = document.getElementsByClassName("overlay");
+        //     console.log(e.target);
+        //     window.onclick = function (e) {
+        //         if (e.target == overlayElem) {
+        //             overlayElem.style.visibility = "hidden";
+        //             overlayElem.style.opacity = 0;
+        //         }
+        //     };
+        // })();
+
+
+        {% comment %} $(document).mouseup(function (e) {
+            const overlayElem = $(".overlay");
+            if (overlayElem.has(e.target).length === 0) {
+                overlayElem.removeClass("show");
+                // $(".overlay").css({ visibility: "hidden", opacity: 0 });
+            };
+        }); {% endcomment %}
+
+
+
+    </script>
+</body>
+
+</html>

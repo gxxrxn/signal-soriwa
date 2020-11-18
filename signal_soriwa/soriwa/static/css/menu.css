@@ -1,0 +1,197 @@
+@font-face { 
+    font-family: 'GongGothic_M';
+    src: url('/fonts/Gong\ Gothic\ OTF\ Medium.otf') format('woff');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face { 
+    font-family: 'GongGothic_B';
+    src: url('/fonts/Gong\ Gothic\ OTF\ Bold.otf') format('woff');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face { 
+    font-family: 'GongGothic_L';
+    src: url('/fonts/Gong\ Gothic\ OTF\ Light.otf') format('woff');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+
+
+body {
+    height: 98vh;
+    background-image: url("../images/background.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    font-family: 'GongGothic_M';
+    font-size: 16px;
+    text-align: center;
+}
+
+.backbtn{
+    position : absolute;
+    top : 25px;
+    left : 35px;
+}
+
+.no-drag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
+
+.main_msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_txt {
+    display: flex;
+    justify-content: center;
+    height: 32px;
+    font-family: "GongGothic_B";
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+
+.sub_txt {
+    width: 196px;
+    height: 19px;
+    font-family: "GongGothic_L";
+    font-size: 14px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.menu_container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 200px 200px 200px;
+    grid-column-gap: 42px; grid-row-gap: 10px;
+    
+}
+
+.menu_item {
+    width: 300px;
+    height: 190px;
+    border: solid 1px #707070;
+    background-color: #ffffff;
+}
+
+.menu_item:nth-child(n) {
+    border: 6px solid #ffe19f;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 900;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    position: fixed;
+    width: 60%;
+    padding: 10px;
+    max-width: 500px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, .9);
+    /* "delay" the visibility transition */
+    -webkit-transition: opacity .5s, visibility 0s linear .5s;
+    transition: opacity .5s, visibility 0s linear .5s;
+    z-index: 1;
+}
+
+.popup:target{
+    visibility: visible;
+    opacity: 1;
+    /* cancel visibility transition delay */
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.popup-close {
+    position: absolute;
+    padding: 10px;
+    max-width: 500px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, .9);
+}
+
+.popup .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 5px;
+    color: #000;
+    transition: color .3s;
+    font-size: 2em;
+    line-height: .6em;
+    font-weight: bold;
+}
+
+.popup .close:hover {
+    color: #f68686;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blank {
+    height: 5px;
+}
+
+.character_txt {
+    font-family: "GongGothic_L";
+    font-size: 7px;
+}

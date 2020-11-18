@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNAL</title>
+    <link rel="stylesheet" href="{% static 'css/motion.css' %}"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'GongGothicLight';
+            src: local('GongGothicLight'),
+                url('{% static 'fonts/GongGothicLight.ttf' %}') format("truetype");
+        }
+        @font-face{
+            font-family : "UhBee";
+            src : url('{% static 'fonts//UhBeeQUEENJ.ttf' %}') format('truetype');
+        }
+        @font-face {
+            font-family: 'GongGothicMedium';
+            src: local('GongGothicMedium'),
+            url('{% static 'fonts/GongGothicMedium.ttf' %}') format("truetype");
+        }
+
+        @font-face {
+            font-family: 'GongGothicBold';
+            src: local('GongGothicBold'),
+                url('{% static 'fonts/GongGothicBold.ttf' %}') format("truetype");
+        }
+        body {
+            background-image: url({% static 'src/background.png' %});
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>    
+    <a href={% url 'main' %} >
+        <img class="backbtn no-drag" src="{% static 'src/back.png' %}" width = "30" height = "30" />
+    </a>
+    <div class = "emotion"> 
+    <div class = "blank1"></div>  
+    <div class = "blank1"></div>      
+        <div class="topic">  
+            <h1>손으로 말해봐요</h1> 
+            <div class = "blank1"></div>
+            <h4>수어 <span class="hanza">(手語)</span>는<br/>
+            단어 뜻에서도 직관적으로 알 수 있듯이,<br/>
+            손동작이 의미전달에 있어서 매우 중요합니다.<br/>
+            <div class = "blank1"></div>
+            <b>SIGNAL</b>팀은 Openpose를 활용해<br/> 
+            손 관절의 위치를 추출해내고, 어떤 손동작인지 파악한 후에<br/>
+            텍스트로 변환하는 MTT(Motion To Text) 모델을 개발했습니다.</h4>             
+            <img class="dot" src="{% static 'src/point.png' %}">
+            <div class = "blank3"></div>
+            <h6>글자를 눌러보세요 ^ㅇ^</h6>
+        </div>
+        <div class = "blank1"></div>
+        <div class="sentence_container">
+            <div class="blank"></div>
+            <a class="sentence_1" href="#" onclick=toggleImg(this); return false;>안녕하세요</a>
+            <div class="blank"></div>
+            <a class="sentence_2" href="#" onclick=toggleImg(this); return false;>만나서 반갑습니다</a>
+            <div class="blank"></div>
+            <a class="sentence_3" href="#" onclick=toggleImg(this); return false;>어렵습니다</a>
+            <div class="blank"></div>
+            <a class="sentence_4" href="#" onclick=toggleImg(this); return false;>알아들었습니다</a>
+            <div class="blank"></div>
+            <a class="sentence_5" href="#" onclick=toggleImg(this); return false;>재밌습니다</a>
+            <div class="blank"></div>
+            <a class="sentence_6" href="#" onclick=toggleImg(this); return false;>감사합니다</a>
+            <div class="blank"></div>
+            <a class="sentence_7" href="#" onclick=toggleImg(this); return false;>수고하셨습니다</a>
+            <div class="blank"></div>
+            <a class="sentence_8" href="#" onclick=toggleImg(this); return false;>다음에 또 봐요</a>
+            <div class="blank"></div>
+            <a class="sentence_9" href="#" onclick=toggleImg(this); return false;>사랑합니다</a>
+            <div class="blank"></div>
+        </div>
+        <div class = "blank1"></div>      
+        <div class = "box_container">
+            <div class = "example">
+                <p>예시</p>
+                <div class = "blank1"> </div>
+                <div class = "examplebox">
+                    <img id="img" class="no-drag" src="{% static 'src/motion_gesture/greet.gif' %}" width="100%" height="100%" />
+                </div>
+            </div>
+            <div class = "try">
+                <p>직접 해보기</p>
+                <div class = "blank1"> </div>
+                <img class = "trybox" src="{% url 'motion_video'%}">               
+            </div>
+        </div>
+        <div class = "resultbox">
+                <div class = "blank2"> </div>
+                <p>내가 하려는 말은?</p>
+                <div class = "blank1"> </div>
+                <div class = "result">
+                    <h3>수신중...</h3>
+                </div>                    
+        </div>
+    </div>
+    <script>
+        function toggleImg(e) {
+        const element_name = $(e).attr('class');
+        const resultElement = document.getElementsByClassName('.examplebox');
+        switch (element_name) {
+            case "sentence_1":
+                const item_1_img = document.getElementById("img").src = "{% static 'src/motion_gesture/greet.gif' %}";
+                resultElement.appendChild(item_1_img);
+            case "sentence_2":
+                const item_2_img = document.getElementById("img").src = "{% static 'src/motion_gesture/nicemeet.gif' %}";
+                resultElement.appendChild(item_2_img);
+            case "sentence_3":
+                const item_3_img = document.getElementById("img").src = "{% static 'src/motion_gesture/hard.gif' %}";
+                resultElement.appendChild(item_3_img);
+            case "sentence_4":
+                const item_4_img = document.getElementById("img").src = "{% static 'src/motion_gesture/understand.gif' %}";
+                resultElement.appendChild(item_4_img);
+            case "sentence_5":
+                const item_5_img = document.getElementById("img").src = "{% static 'src/motion_gesture/funny.gif' %}";
+                resultElement.appendChild(item_5_img);
+            case "sentence_6":
+                const item_6_img = document.getElementById("img").src = "{% static 'src/motion_gesture/thank.gif' %}";
+                resultElement.appendChild(item_6_img);
+            case "sentence_7":
+                const item_7_img = document.getElementById("img").src = "{% static 'src/motion_gesture/takecare.gif' %}";
+                resultElement.appendChild(item_7_img);
+            case "sentence_8":
+                const item_8_img = document.getElementById("img").src = "{% static 'src/motion_gesture/seenext4.gif' %}";
+                resultElement.appendChild(item_8_img);
+            case "sentence_9":
+                const item_9_img = document.getElementById("img").src = "{% static 'src/motion_gesture/love.gif' %}";
+                resultElement.appendChild(item_9_img);
+        }
+
+    };
+    </script>
+</body>
+</html>
