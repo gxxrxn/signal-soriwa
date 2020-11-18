@@ -1,0 +1,240 @@
+@keyframes heart-ani {
+    from {
+        transform: rotateY(20deg);
+    }
+    to {
+        transform: rotateY(-20deg);
+    }
+}
+@keyframes main_txt {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+* { margin: 0; padding: 0; }
+body { background-color: #FFFEFE; }
+header { width: 100%; text-align: center; height: 50px; position: fixed; }
+.menu { display: inline-block; margin-left: 50px; padding-top: 15px; cursor: pointer; }
+a { text-decoration: none; }
+div { width: 100vw; height: 100vh; }
+
+#window1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#window2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#window3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#window4 { }
+
+#window1 #title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10vh;
+}
+#window1 .main_img {
+    width: 102px;
+    height: auto;
+    animation: heart-ani 0.8s alternate infinite linear;
+}
+#window1 #title img {
+    width: 102px;
+}
+#window1 #title #signal {
+    font-family: GongGothicBold;
+    color: white;
+    font-size: 90px;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    -webkit-animation: main_txt 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: main_txt 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+#window1 #title #soriwa {
+    font-family: GongGothicLight;
+    text-shadow: 0 3px 4px rgba(0, 0, 0, 0.16);
+    color: white;
+    font-size: 22px;
+    margin-bottom: 13px;
+}
+#window1 #title #explain {
+    font-family: GongGothicLight;
+    font-size: 15px;
+    text-align: center;
+}
+#window1 .line {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    max-height: 200px;
+    overflow: hidden;
+}
+#window1 .line img {
+    max-height: initial;
+    margin-top: -1.5%;
+}
+#window1 .portfolio_right {
+    width: fit-content;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 20rem;
+    margin-bottom: 5rem;
+}
+.date {
+    color: #f86868;
+    font-size: 18px;
+    font-family: GongGothicBold;
+    margin-bottom: 5px;
+}
+.main_process {
+    color: #654747;
+    font-size: 18px;
+    font-family: GongGothicMedium;
+}
+.process {
+    color: #654747;
+    font-size: 15px;
+    font-family: GongGothicLight;
+    margin-bottom: 10px;
+}
+#window1 .process {
+    padding-left: 5px;
+}
+#window2 .line {
+    position: absolute;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    overflow: hidden;
+}
+#window2 .line img {
+    max-height: initial;
+    margin-top: 700px;
+}
+#window2 .portfolio_left {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 20rem;
+    text-align: right;
+    padding-top: 7rem;
+}
+#window2 .portfolio_right {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 23rem;
+    padding-bottom: 5rem;
+}
+.portfolio_left a {
+    border-radius: 32px;
+    background-color: #0979ea;
+    padding: 10px 17px;
+    font-family: GongGothicMedium;
+    text-space: 3px;
+    font-size: 15px;
+    color: white;
+}
+.portfolio_right a {
+    border-radius: 32px;
+    background-color: #0979ea;
+    padding: 10px 17px;
+    font-family: GongGothicMedium;
+    text-space: 3px;
+    font-size: 15px;
+    color: white;
+}
+#window3 .center_elements {
+    position: absolute;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#window3 .center_elements span {
+    font-family: GongGothicLight;
+    font-size: 20px;
+    color: #f86868;
+    max-height: 20vh;
+    padding-top: 10vh;
+}
+#window3 .center_elements .point {
+    max-height: 5vh;
+    padding-top: 3vh;
+}
+#window3 .line {
+    width: auto;
+    max-height: 70vh;
+    overflow: hidden;
+}
+#window3 .line img {
+    max-height: initial;
+    margin-top: -1400px;
+}
+#window3 .portfolio_left {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 18rem;
+    text-align: right;
+    padding-top: 7rem;
+}
+#window3 .portfolio_right {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 18rem;
+    padding-bottom: 13rem;
+}
+#window3 .portfolio_left .process {
+    margin-bottom: 20px;
+}
+
+footer {
+    width: 100vw;
+}
+.footer_div {
+    height: inherit;
+    background-color: #0e376f;
+    text-align: center;
+    font-family: GongGothicLight;
+    font-size: 11px;
+    color: white;
+    padding: 20px 0;
+}

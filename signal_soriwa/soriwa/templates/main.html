@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Signal</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'GongGothicLight';
+            src: local('GongGothicLight'),
+            url('{% static 'fonts/GongGothicLight.ttf' %}') format("truetype");
+        }
+
+        @font-face {
+            font-family: 'GongGothicMedium';
+            src: local('GongGothicMedium'),
+            url('{% static 'fonts/GongGothicMedium.ttf' %}') format("truetype");
+        }
+
+        @font-face {
+            font-family: 'GongGothicBold';
+            src: local('GongGothicBold'),
+            url('{% static 'fonts/GongGothicBold.ttf' %}') format("truetype");
+        }
+
+        section {
+            background-image: url("{% static 'src/main_bg2.png' %}");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body style="width: 100vw; height: 100vh; overflow-x: hidden">
+    <section>
+        <div id="window1">
+            <div id="title">
+                <div class="main_img">
+                    <img src={% static 'src/heart_monitor.png' %} />
+                </div>
+                <span id="signal">SIGNAL</span>
+                <span id="soriwa">소리와 프로젝트</span>
+                <span id="explain">
+                    본 프로젝트는 ‘RAZEN’ 기업과 함께한 프로젝트로서,<br>
+                    청각장애인을 위한 화상교육플랫폼에 대한 아이디어로부터 시작했습니다.<br>
+                    수어는 손, 몸짓, 표정이 다 포함된 것으로서,<br>
+                    청각장애인의 상황에 공감하며 개발하려고 노력했습니다.
+                </span>
+            </div>
+            <div class="line">
+                <img src="{% static 'src/line.png' %}">
+            </div>
+            <div class="portfolio_right">
+                <div style="width: fit-content; height: fit-content; display: flex; flex-direction: column">
+                    <span class="date">2020.10.12 ~ 16</span>
+                    <span class="main_process">'RAZEN' 기업 프로젝트 시작</span>
+                    <span class="process">팀원구성 및 프로젝트 기획</span>
+                </div>
+            </div>
+        </div>
+        <div id="window2">
+            <div class="line">
+                <img src="{% static 'src/line.png' %}">
+            </div>
+            <div class="portfolio_left">
+                <div style="width: fit-content; height: fit-content; display: flex; flex-direction: column">
+                    <span class="date">2020.10.19 ~ 30</span>
+                    <span class="main_process">감정분석 엔진 개발</span>
+                    <span class="process">사람의 표정을 보고<br>감정을 분석하는 딥러닝 모델 개발</span>
+                    <div style="width: auto; height: auto;">
+                        <a href="{% url 'emotion' %}">체험해보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio_right">
+                <div style="width: fit-content; height: fit-content; display: flex; flex-direction: column">
+                    <span class="date">2020.11.02 ~ 08</span>
+                    <span class="main_process">MTT(Motion To Text) 엔진 개발</span>
+                    <span class="process">Openpose을 활용해<br>손동작을 텍스트로 변환하는 모델 개발</span>
+                    <div style="width: auto; height: auto;">
+                        <a href="{% url 'motion' %}">체험해보기</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="window3">
+            <div class="center_elements">
+                <div class="line">
+                    <img src="{% static 'src/line.png' %}">
+                </div>
+                <span>To be continued</span>
+                <img class="point" src="{% static 'src/point.png' %}">
+                <img class="point" src="{% static 'src/point.png' %}">
+                <img class="point" src="{% static 'src/point.png' %}">
+
+            </div>
+            <div class="portfolio_left">
+                <div style="width: fit-content; height: fit-content; display: flex; flex-direction: column">
+                    <span class="date">2020.11.09 ~ 10</span>
+                    <span class="main_process">추가 컨텐츠 기획 및 개발</span>
+                    <span class="process">수어로 오늘의 메뉴 정하기</span>
+                    <div style="width: auto; height: auto;">
+                        <a href="{% url 'menu' %}">체험해보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio_right">
+                <div style="width: fit-content; height: fit-content; display: flex; flex-direction: column">
+                    <span class="date">2020.11.11 ~ 12</span>
+                    <span class="main_process">추가 컨텐츠 기획 및 개발</span>
+                    <span class="process">SIGNAL 팀과 함께하는<br>웃음 참기 챌린지</span>
+                    <div style="width: auto; height: auto;">
+                        <a href="{% url 'emotion_analysis' %}">체험해보기</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <div class="footer_div">Copyright 2020. 시그널. All rights reserved</div>
+        </footer>
+
+    </section>
+    <script type="text/javascript" src={% static 'js/main.js' %}></script>
+</body>
+
+</html>

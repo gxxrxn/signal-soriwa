@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>표정 분석</title>
+    <style>
+        @font-face {
+            font-family: 'GongGothicBold';
+            src: local('GongGothicBold'),
+            url('{% static 'fonts/GongGothicBold.ttf' %}') format("truetype");
+        }
+
+        @font-face {
+            font-family: 'GongGothicLight';
+            src: local('GongGothicLight'),
+            url('{% static 'fonts/GongGothicLight.ttf' %}') format("truetype");
+        }
+
+        @font-face {
+            font-family: 'GongGothicMedium';
+            src: local('GongGothicMedium'),
+            url('{% static 'fonts/GongGothicMedium.ttf' %}') format("truetype");
+        }
+
+        body {
+            background-image: url({% static 'src/background.png' %});
+            background-size: cover;
+        }
+
+        .section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .backbtn {
+            position: absolute;
+            top: 25px;
+            left: 35px;
+        }
+
+        .youtube {
+            border-radius: 10px;
+            position: relative;
+            width: 50vw;
+            height: 60vh;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'GongGothicBold';
+            margin-bottom: 0px;
+        }
+
+        h4 {
+            font-family: "GongGothicLight";
+            font-weight: lighter;
+            font-size: 16px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        div a {
+            text-decoration: none;
+            border-radius: 32px;
+            background-color: #0979ea;
+            padding: 14px 25px;
+            font-family: GongGothicMedium;
+            font-size: 15px;
+            color: white;
+        }
+
+        a:hover {
+            background-color: #0e376f;
+        }
+    </style>
+</head>
+
+<body style="width: 100vw; height: 100vh; overflow: hidden;">
+    <a href={% url 'main' %}>
+        <img class="backbtn" src="{% static 'src/back.png' %}" width="30" height="30" />
+    </a>
+    <div class="section">
+        <h1>웃음 참기 챌린지</h1>
+        <h4>
+            <b>SIGNAL</b> 팀이 개발한 감성분석 엔진으로, 당신이 웃음을 참는지 날카롭게 지켜볼게요 😏<br>
+            편하게 영상을 즐겨주세요 !
+        </h4>
+        <iframe class='youtube' src="https://www.youtube.com/embed/g0P2m3t3Sr0" frameborder="0"
+            allowfullscreen></iframe>
+        <div>
+            <a href="{% url 'analysis_result' %}">당신의 웃음 참기 능력치는 ?</a>
+        </div>
+    </div>
+</body>
+
+</html>
