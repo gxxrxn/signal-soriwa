@@ -90,7 +90,7 @@
             <div class = "try">
                 <p>직접 해보기</p>
                 <div class = "blank1"> </div>
-                <img class = "trybox" src="{% url 'motion_video'%}">               
+                <video class="trybox" id="videoInput"></video>
             </div>
         </div>
         <div class = "resultbox">
@@ -138,5 +138,7 @@
 
     };
     </script>
+    <script type="text/javascript" src="{% static 'js/motion.js' %}"></script>
+
 </body>
 </html>

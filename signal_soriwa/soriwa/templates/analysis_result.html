@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>분석 결과</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <link rel="stylesheet" href={% static 'css/analysis_result.css' %}>
+    <style>
+        @font-face {
+            font-family: 'GongGothicBold';
+            src: local('GongGothicBold'),
+                url('{% static 'fonts/GongGothicBold.ttf' %}') format("truetype");
+        }
+        @font-face {
+            font-family: 'GongGothicLight';
+            src: local('GongGothicLight'),
+                url('{% static 'fonts/GongGothicLight.ttf' %}') format("truetype");
+        }
+         @font-face {
+          font-family: 'GongGothicMedium';
+          src: local('GongGothicMedium'),
+               url('{% static 'fonts/GongGothicMedium.ttf' %}') format("truetype");
+        }
+        body {
+            background-image: url({% static 'src/background.png' %});
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+    </style>
 </head>
-
 <body>
-
+    <header>
+        <a href='/'>
+            <img class="back_btn" src="{% static 'src/back.png' %}" width="30" height="30" />
+        </a>
+    </header>
+    <section>
+        <div class="main">
+            <div class="main_msg">
+                <h1 class="main_txt">당신의 웃음 참기 능력치는?</h1>
+                <br>
+                <h2 class="sub_txt">
+                    웃음 참느라 고생하셨습니다<br/>
+                    이제 실컷 웃으셔도 돼요 ^_^
+                    <br/>
+                    <br/>
+                    <b>SIGNAL</b>팀이 판단한 결과는 다음과 같습니다
+                </h2>
+                <div class = "blank"></div>
+               </div>
+            <div class="count_character">
+                <div class="count-wrap">
+                    <div class="count-image"><img src="{% static 'src/text_b.png' %}" ></div>
+                    <div class="count-text"><h3>{{ count }}회</h3></div>
+                </div>
+                <div class = "characters">
+                    <h4 class="t1">놀랍군요..</h4>
+                    <img class="signal" src="{% static 'src/signal.png' %}" height="auto" width="400px">
+                    <h4 class = "t2">이런 분은<br/>처음이에요!</h4>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
-
 </html>
