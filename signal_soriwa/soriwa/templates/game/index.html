@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>signal</title>
+    <link rel="shortcut icon" href="{% static 'game/TemplateData/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'game/TemplateData/style.css' %}">
+    <style>
+        body {
+            background-color: #f86868;
+        }
+        .backbtn{
+            position : absolute;
+            top : 25px;
+            left : 35px;
+        }
+        .no-drag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
+    </style>
+    <script src="{% static 'game/TemplateData/UnityProgress.js' %}"></script>
+    <script src="{% static 'game/Build/UnityLoader.js' %}"></script>
+  </head>
+  <body>
+    <a href="{% url 'main' %}" >
+        <img class="backbtn no-drag" src="{% static 'src/back.png' %}" width = "30" height = "30" />
+    </a>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+      </div>
+    </div>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "{% static 'game/Build/game.json' %}", {onProgress: UnityProgress});
+    </script>
+  </body>
+</html>

@@ -14,18 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from soriwa import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main, name='main'),
-    path('face/', views.face, name='face'),
     path('emotion/', views.emotion, name='emotion'),
     path('motion/', views.motion, name='motion'),
-    path('face_video', views.face_video, name='face_video'),
-    path('motion_video', views.motion_video, name='motion_video'),
     path('menu/', views.menu, name="menu"),
+    path('game/', views.game, name="game"),
     path('emotion_analysis/', views.emotion_analysis, name='emotion_analysis'),
     path('analysis_result/', views.analysis_result, name='analysis_result'),
+    path('result/', views.result, name='result'),
 ]

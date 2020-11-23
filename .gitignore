@@ -1,0 +1,12 @@
+.DS_Store
+.vscode
+.idea
+signal_soriwa/db.sqlite3
+**/db.sqlite3
+signal_soriwa/signal_soriwa/__pycache__
+signal_soriwa/soriwa/__pycache__
+signal_soriwa/soriwa/trained_weights_final.h5
+signal_soriwa/soriwa/migrations/__pycache__
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py

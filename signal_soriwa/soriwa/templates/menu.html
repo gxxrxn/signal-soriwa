@@ -52,7 +52,7 @@
             </div>
             <div class="blank"></div>
             <div class="menu_container">
-                <div class="menu_item no-drag"><a href="#pop01"><img src="{% static 'src/food_gesture/김떡순.gif'%} "
+                <div class="menu_item no-drag"><a href="#pop01"><img src="{% static 'src/food_gesture/김떡순.gif'%} "
                             height="100%" width="100%"></a></div>
                 <div class="menu_item no-drag"><a href="#pop02"><img src="{% static 'src/food_gesture/치맥.gif'%} " height="100%"
                             width="100%"></a></div>
@@ -139,18 +139,16 @@
                         <p>호구마!!!!아니...호박고구마</p>
                     </div>
                 </div>
-
-
             </div>
 
         </div>
     </section>
     <footer>
-        <p class="character_txt">난...<br> 이게 땡겨!</p>
+        <p class="character_txt">우리를 클릭해봐 !</p>
         </div>
-        <div class="logo">
-            <img class="no-drag" src="{% static 'src/시그널.png'%}" width="240" alt="시그널이미지" />
-        </div>
+        <a class="logo" href={% url 'game' %}>
+            <img class="no-drag" src="{% static 'src/signal.png'%}" width="240" alt="시그널이미지" />
+        </a>
         <p class="character_txt">수어를 보고<br>음식을 맞춰볼까?</p>
 
     </footer>

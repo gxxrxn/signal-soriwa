@@ -1,0 +1,159 @@
+header {
+    /*height: 10%;*/
+}
+
+section {
+    
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    width: 666px;
+    height: 42px;
+    font-family: GongGothicBold;
+    font-size: 32px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: left;
+    /*color: #000000;*/
+    color : #f86868;
+
+}
+
+h2 {
+    width: 478px;
+    height: 38px;
+    font-family: GongGothicMedium;
+    font-size: 15px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+h3{
+    font-size : 48px;
+    font-family : GongGothicBold;
+    color : #f86868;
+}
+
+h4{
+    font-size : 10px;
+    font-family : GongGothicLight;
+}
+.back_btn{
+    position : absolute;
+    top : 25px;
+    left : 35px;
+}
+
+.main {
+    height : 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_txt{    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_msg {
+    /* border : solid black; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.count_character{
+    /* border : solid black; */
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.count-wrap {
+    height : 150px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    /* border : solid black; */
+    width : 500px;
+	position: relative;
+}
+
+.count-wrap img {
+    width : 350px;
+    height : 200px;
+	vertical-align: middle;
+} 
+
+.count-text {
+    /* border : solid black; */
+	text-align: center;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+}
+
+.count_character{
+    /* border : solid black; */
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.characters{
+    /* border : solid black; */
+    display : flex;
+}
+
+.t1 {
+    position : relative;
+    top : 60px;
+    text-align: center;
+
+}
+
+.t2{
+    position : relative;
+    top : 90px;
+    text-align: center;
+
+}
+
+.blank {
+    height : 90px;
+}
+/* .effect_txt  {
+    width: 84px;
+    height: 14px;
+    font-family: GongGothic_L;
+    font-size: 12px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}  */

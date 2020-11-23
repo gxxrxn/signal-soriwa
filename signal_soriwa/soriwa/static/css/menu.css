@@ -1,35 +1,11 @@
-@font-face { 
-    font-family: 'GongGothic_M';
-    src: url('/fonts/Gong\ Gothic\ OTF\ Medium.otf') format('woff');
-    font-weight: normal; 
-    font-style: normal; 
-}
-
-@font-face { 
-    font-family: 'GongGothic_B';
-    src: url('/fonts/Gong\ Gothic\ OTF\ Bold.otf') format('woff');
-    font-weight: normal; 
-    font-style: normal; 
-}
-
-@font-face { 
-    font-family: 'GongGothic_L';
-    src: url('/fonts/Gong\ Gothic\ OTF\ Light.otf') format('woff');
-    font-weight: normal; 
-    font-style: normal; 
-}
-
-
 
 body {
     height: 98vh;
-    background-image: url("../images/background.png");
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 section {
     height: 90%;
     display: flex;
@@ -194,4 +170,5 @@ p {
 .character_txt {
     font-family: "GongGothic_L";
     font-size: 7px;
+    padding-top: 25px;
 }

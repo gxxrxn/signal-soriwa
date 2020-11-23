@@ -55,10 +55,9 @@ h5 {
 }
 
 .trybox{
-    border : solid #0979ea;
-    width : 35vw;
-    height : 25vw;
-
+    /*border : solid #0979ea;*/
+    width : 490px;
+    height : 400px;
 }
 
 .resultbox{

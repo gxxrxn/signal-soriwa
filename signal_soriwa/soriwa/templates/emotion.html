@@ -7,6 +7,7 @@
     <title>SIGNAL</title>
     <link rel="stylesheet" href="{% static 'css/emotion.css' %}"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <script src="https://docs.opencv.org/3.4/opencv.js"></script>
     <style>
         @font-face {
             font-family: 'GongGothicLight';
@@ -31,16 +32,17 @@
         body {
             background-image: url({% static 'src/background.png' %});
             background-size: cover;
+            overflow: hidden;
         }
     </style>
 </head>
-<body>    
+<body>
     <a href={% url 'main' %}>
         <img class="backbtn no-drag" src="{% static 'src/back.png' %}" width ="30" height = "30" />
     </a>
-    <div class = "emotion"> 
-        <div class = "blank3"> </div>        
-        <div class="topic">  
+    <div class = "emotion">
+        <div class = "blank3"></div>
+        <div class="topic">
             <h5>표정만 봐도 알 수 있잖아~</h5>
             <h1>당신의 현재 감정은?</h1>
             <div class = "blank2"> </div>
@@ -52,19 +54,23 @@
                 감정을 분석하는 딥러닝 모델을 개발했습니다.
             </h4>
         </div>
-        <div class = "blank2"> </div>
+        <div class = "blank2"></div>
         <div class = "try">
             <h4><b>직접 해보기</b></h4>
             <div class="blank1"> </div>
-            <img class="trybox no-drag" src="{% url 'face_video' %}">
+            <div class="trybox">
+                <video class="no-drag" id="videoInput" style="border : solid #0979ea;"></video>
+                <canvas id='canvasOutput' style="visibility: hidden;"></canvas>
+            </div>
             <div class="resultbox">
                 <div class = "blank3"> </div>
-                <h4><b>나는 지금..</b></h4>                
+                <h4><b>나는 지금..</b></h4>
                 <div class = "result">
-                    <h3>Happy</h3>
+                    <h3>. . .</h3>
                 </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="{% static 'js/emotion2.js' %}"></script>
 </body>
 </html>
