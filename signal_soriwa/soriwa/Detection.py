@@ -11,8 +11,8 @@ class Detection(object):
         sess = tf.Session(config=config)  # 중요코드
         res_path = os.getcwd()
         self.emotion_yolo = YOLO(model_path=str(res_path) + '/soriwa/trained_weights_final.h5',
-                            anchors_path='~/Desktop/signal-soriwa/signal_soriwa/soriwa/kerasyolo3/model_data/yolo_anchors.txt',
-                            classes_path='~/Desktop/signal-soriwa/signal_soriwa/soriwa/class.txt')
+                            anchors_path=str(res_path) + '/soriwa/kerasyolo3/model_data/yolo_anchors.txt',
+                            classes_path=str(res_path) + '/soriwa/class.txt')
 
         self.frame_cnt = 0
         self.labels = {}
