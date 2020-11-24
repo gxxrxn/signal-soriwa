@@ -2,16 +2,17 @@ import tensorflow as tf
 from soriwa.kerasyolo3.yolo import YOLO
 import cv2
 import numpy as np
+import os
 
 class Detection(object):
     def __init__(self):
         config = tf.ConfigProto()
         config.gpu_options.allow_growth = True
         sess = tf.Session(config=config)  # 중요코드
-
-        self.emotion_yolo = YOLO(model_path='C:/Users\kkr12\signal-soriwa/signal_soriwa/soriwa/trained_weights_final.h5',
-                            anchors_path='~/signal-soriwa/signal_soriwa/soriwa/kerasyolo3/model_data/yolo_anchors.txt',
-                            classes_path='~/signal-soriwa/signal_soriwa/soriwa/class.txt')
+        res_path = os.getcwd()
+        self.emotion_yolo = YOLO(model_path=str(res_path) + '/soriwa/trained_weights_final.h5',
+                            anchors_path='~/Desktop/signal-soriwa/signal_soriwa/soriwa/kerasyolo3/model_data/yolo_anchors.txt',
+                            classes_path='~/Desktop/signal-soriwa/signal_soriwa/soriwa/class.txt')
 
         self.frame_cnt = 0
         self.labels = {}

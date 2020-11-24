@@ -28,6 +28,7 @@ def menu(request):
 def game(request):
     return render(request, 'game/index.html')
 
+
 def result(request):
     global detection
 
@@ -37,6 +38,7 @@ def result(request):
     try:
         data = request.POST.__getitem__('data')
         data = data[22:]
+        print('     ', data[:20])
         img = base64.b64decode(data)
         result = emotion[detection.get_class(img)]
     except:

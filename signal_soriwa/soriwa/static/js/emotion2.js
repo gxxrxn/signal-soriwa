@@ -33,7 +33,6 @@ function errorCallback(error) {
 
 navigator.getUserMedia(constraints, successCallback, errorCallback);
 
-
 function process() {
     cap.read(src);
     cv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY);
